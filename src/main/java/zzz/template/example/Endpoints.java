@@ -18,9 +18,24 @@ public class Endpoints implements Iterable<String> {
 
 	private final ConfigCsiData config;
 	private final ServiceType serviceType;
+	private String primaryUrl;
+	private String secondaryUrl;
 	
 	public Endpoints(ConfigCsiData config, ServiceType serviceType) {
 		this.config = config;
+		this.serviceType = serviceType;
+		switch (serviceType) {
+		case USER_PROFILE:
+			primaryUrl = config.getPrimaryProfileUri();
+			secondaryUrl = config.getSecondaryProfileUri();
+			break;
+		case VIDEO_PACKAGES:
+			primaryUrl = config.getPrimaryVideoUri();
+			secondaryUrl = config.getSecondaryVideoUri();
+			break;
+		default:
+			throw new IllegalStateException("Can only get know service type");
+		}
 	}
 
 
