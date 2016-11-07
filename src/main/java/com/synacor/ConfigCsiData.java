@@ -8,14 +8,22 @@ package com.synacor;
  *
  */
 public class ConfigCsiData {
-	private final String primaryUri = "http://abc.com/primary";
-	private final String secondaryUri = "http://abc.com/secondary";
+	private final String primaryProfileUri = "http://abc.com/primary";
+	private final String secondaryProfileUri = "http://abc.com/secondary";
+	private final String primaryVideoUri = "http://xyz.com/primary";
+	private final String secondaryVideoUri = "http://xyz.com/secondary";
 	
-	public String getPrimaryUri() {
-		return primaryUri;
+	public String getPrimaryProfileUri() {
+		return primaryProfileUri;
 	}
-	public String getSecondaryUri() {
-		return secondaryUri;
+	public String getSecondaryProfileUri() {
+		return secondaryProfileUri;
+	}
+	public String getPrimaryVideoUri() {
+		return primaryVideoUri;
+	}
+	public String getSecondaryVideoUri() {
+		return secondaryVideoUri;
 	}
 	
 	

@@ -7,6 +7,7 @@ import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 import com.synacor.ConfigCsiData;
+import com.synacor.ServiceType;
 
 /** Present the URI endpoint data as a collection.
  * 
@@ -16,8 +17,9 @@ import com.synacor.ConfigCsiData;
 public class Endpoints implements Iterable<String> {
 
 	private final ConfigCsiData config;
+	private final ServiceType serviceType;
 	
-	public Endpoints(ConfigCsiData config) {
+	public Endpoints(ConfigCsiData config, ServiceType serviceType) {
 		this.config = config;
 	}
 
